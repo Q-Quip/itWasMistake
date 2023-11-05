@@ -1,0 +1,29 @@
+@import "src/styles/variables.scss";
+
+@mixin footerLinks {
+    display: flex;
+    flex-direction: none;
+    justify-content: space-between;
+    li {
+        text-transform: uppercase;
+        color: #2b2b2b;
+        margin: 20px 0 20px 0;
+        &:hover {
+            color:#c49e89;
+        }
+        transition: color .3s ease-out;
+    }
+}
+.firstLine {
+    @include footerLinks;
+}
+.secondLine {
+    @include footerLinks;
+    border-top: 1px solid #c49e89;
+    li:last-child {
+        color: #c49e89;
+    } 
+    li:first-child {
+        color: #5f5f5f ;
+    }
+}

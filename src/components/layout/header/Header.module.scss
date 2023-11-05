@@ -1,0 +1,88 @@
+@import "src/styles/variables.scss";
+
+
+
+header {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+.navi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    div {
+        display: flex;
+        align-items: center;
+        
+        &.rightBar {
+            justify-content: flex-end;
+        } 
+        &.leftBar {
+            justify-content: flex-start;
+        }
+        &.centBar {
+            justify-content: center;
+        }
+        
+        ul{
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                padding: 0px 30px;
+                height: 100px;
+                button {
+                    position: relative;
+                    background-color: $white;
+                    .hovText {
+                        &::after {
+                            content: "Create a moodboard";
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 2rem;
+                            top: 2rem;
+                            left: -2.6rem;
+                            opacity: 0;
+                            white-space: nowrap; 
+                            transition: opacity 0.4s ease;
+                            font-size: 0.9rem;
+                        }
+                        &:hover::after {
+                            opacity: 1;
+                        }
+                    }
+                    p {
+                        &::after {
+                            content: "";
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            top: 0.3rem;
+                            left: 0;
+                            background-color: #c49e89;
+                            transform: scaleX(0);
+                            transform-origin: top left;
+                            transition: transform 0.4s ease;
+                        }
+                        &:hover::after {
+                            transform: scaleX(1);
+                        }
+                        font-size: 1.1rem;
+                        font-weight: 0.3rem;
+                        text-transform: uppercase;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+

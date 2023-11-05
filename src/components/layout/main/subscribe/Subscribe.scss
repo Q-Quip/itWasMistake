@@ -1,0 +1,15 @@
+
+.razmer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    .kartSize {
+        background: #f6f4f1;
+        mix-blend-mode: multiply;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+}

@@ -1,0 +1,17 @@
+@import "src/styles/variables.scss";
+
+@mixin subPadding {
+    position: relative;
+    width: 100%;
+    padding: 0 4.063rem;
+}
+
+.subNews {
+    @include subPadding;
+    background-color: #f6f4f1;
+}
+
+.subLinks {
+    @include subPadding;
+    background-color: #fff;
+}

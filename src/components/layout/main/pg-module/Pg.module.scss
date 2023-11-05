@@ -1,0 +1,16 @@
+@import "src/styles/variables.scss";
+
+
+.section {
+    position: relative;
+    width: 100%;
+    padding: 4.063rem;
+    min-height: calc(45vw + (60px)*2); /* $sectionHeight */
+}
+
+
+
+.section:nth-child(4) {
+    min-height: calc((45vw + (60px)*2) + 300px);
+}
+

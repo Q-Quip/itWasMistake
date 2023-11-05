@@ -1,0 +1,68 @@
+@import "src/styles/variables.scss";
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1.25rem;
+        p:nth-child(1){
+            text-transform: uppercase;
+        }
+        p:nth-child(2){
+            font-weight: 500;
+            font-size: 1.63rem;
+            margin: 0.8rem 0;
+        }
+
+}
+
+.tirList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.8rem;
+}
+
+
+@mixin szImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+}
+
+.distance {
+    .back {
+        padding: 0 7%;
+        background: #f6f4f1;
+        position: relative;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        .imgSize {
+            @include szImg;
+            mix-blend-mode: multiply;
+        }  
+        .bgSize {
+            @include szImg;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: opacity .3s ease-in-out,transform .5s ease-out;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.02);
+                
+            }
+        }
+        img {
+            -webkit-user-drag: none;
+        }
+    }
+    .underPhoto {
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 1.25rem;
+    }
+}
+
+
