@@ -1,9 +1,9 @@
 import React from "react"
-import "./Links.scss"
+import "./Footer.scss"
 
-function Links() {
+function Footer() {
     return(
-        <div>
+        <div className="block">
             <ul className="firstLine">
                 <li><a>walls</a></li>
                 <li><a>fabric</a></li>
@@ -28,4 +28,4 @@ function Links() {
     )
 }
 
-export default Links;
+export default Footer;

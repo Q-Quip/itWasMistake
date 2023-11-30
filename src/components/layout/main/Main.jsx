@@ -11,25 +11,28 @@ import SectionFive from "./sectionFive/SectionFive.jsx"
 import SectionSix from "./sectionSix/SectionSix.jsx"
 import Subscribe from "./subscribe/Subscribe.jsx"
 
+import SubNews from "../footer/sectionSubNew/SubNews.jsx"
 
 export default function Main() {
     return (
-        <main>
-            <SectionOne />
-            <SectionTwo />
-            
-            <PgModule sectionColor={"#e5b672"}>
-                <SectionThree />
-            </PgModule>
-            <PgModule sectionColor={"#fff"}>
-                <SectionFour />
-            </PgModule>
-            <PgModule sectionColor={"rgb(196, 158, 137)"}>
-                <SectionFive />
-            </PgModule>
-            <PgModule sectionColor={"#fff"}>
-                <SectionSix />
-            </PgModule>
-        </main>
+        <>
+            <main >
+                <SectionOne />
+                <SectionTwo />
+                
+                <PgModule sectionColor={"#e5b672"}>
+                    <SectionThree />
+                </PgModule>
+                <PgModule sectionColor={"#fff"}>
+                    <SectionFour />
+                </PgModule>
+                <PgModule sectionColor={"rgb(196, 158, 137)"}>
+                    <SectionFive />
+                </PgModule>
+                <PgModule sectionColor={"#fff"}>
+                    <SectionSix />
+                </PgModule>
+            </main>
+        </>
     )
 }

@@ -1,19 +1,19 @@
 import React from "react"
-import "./Footer.scss"
+import "./SubFooter.scss"
 import SubNews from "./sectionSubNew/SubNews.jsx";
-import Links from "./sectionLinks/Links.jsx"
+import Footer from "./sectionLinks/Footer.jsx"
 
-function Footer() {
+function SubFooter() {
     return(
         <footer>
             <section className="subNews">
                 <SubNews />
             </section>
-            <section className="subLinks">
-                <Links />
+            <section >
+                <Footer />
             </section>
         </footer>
     )
 }
 
-export default Footer;
+export default SubFooter;

@@ -9,16 +9,9 @@ export default function BarPage() {
     return (
         <div className="fullPageBg">
             <ul className="barBtn">
-                <li>
-                    <img src={cancel} alt="close" onClick={ () => {
-                        document.getElementsByClassName('fullPageBg')[0].classList.toggle('hidden');
-                    }}/>
-                    <img src={search} alt="search"/>
-                </li>
                 <li></li>
-                <li>
-                    <img src={shopBasket} alt="shop basket"/>
-                </li>
+                <li></li>
+                <li></li>
             </ul>
             <div className="barLinks">
                 <div className="menUpDown">

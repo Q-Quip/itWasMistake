@@ -1,0 +1,50 @@
+.ontheTop {
+    z-index: 21;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    transition: visibility 0.7s ease-in-out;
+    visibility: hidden;
+}
+
+.ontheTop.active {
+    visibility: visible;
+}
+
+.BG {
+    background-color: rgba(0,0,0,.3);
+    z-index: -5;
+    height: 100vh;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+.main {
+    transition: transform 0.8s ease-in-out;
+    transform: translateX(60rem);
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 35vw;
+    
+}
+.main.active {
+    transform: translateX(0);
+}
+
+.head {
+    background-color: #e4b672;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+    text-transform: uppercase;
+}
+
+.body {
+    height: calc(100% - 100px);
+}

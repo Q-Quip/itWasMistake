@@ -2,14 +2,17 @@ import React from "react"
 import "./SubNews.scss"
 import { handleFormSubmit } from "./SubFunc.js";
 import {facebook, insta, linked, pinterest, youtube } from "/src/components/layout/footer/sectionSubNew/svgBtn.js";
+import { footerImgs1, footerImgs2, footerImgs3 } from "./slider/sliderImgs.js";
+import { SliderCol } from "./slider/SliderCol.jsx";
+
 function SubNews() {
    
     return(
         <div className="subPart">
             <div className="leftSubPart">
-                <div></div>
-                <div>ведутся строительные работы</div>
-                <div></div> 
+                <SliderCol imgUrls = {footerImgs1} />
+                <SliderCol imgUrls = {footerImgs2}  slideWay="slideDown" />
+                <SliderCol imgUrls = {footerImgs3} />
             </div>
             <div className="rightSubPart">
                 <div className="subRows">

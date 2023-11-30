@@ -7,14 +7,6 @@ import TextButton from "/src/components/ui/main/slider/TextButton.jsx"
 
 export default function SectionFour() {
 
-    const ImgList = IMG => {
-        let content = [];
-        for(let propImg in IMG) {
-            content.push(<DragImg img={IMG[propImg]}/>);
-        }
-        return content;
-    };
-
     return (
             <div className="mouseMove">
                 <div className={styles.obolochka}>
@@ -25,7 +17,9 @@ export default function SectionFour() {
                 </div>
 
                 <div> 
-                    {ImgList(IMG)}
+                    {IMG.map( (path, index) => (
+                         <DragImg img={path} key={index}/>
+                    ))}
                 </div>
 
                 <div className={styles.discoverPosition}>
