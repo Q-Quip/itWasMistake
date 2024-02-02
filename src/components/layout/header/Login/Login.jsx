@@ -1,23 +1,28 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import styles from "./Login.module.scss"
+import {handleSubmit} from "./login.js"
 
 export default function Login() {
-    const [mail, setMail] = useState("");
-    const [password, setPassword] = useState("");
-    const changePassword = (e) => {
-        setPassword(e.target.value);
-    }
-    const changeMail = (e) => {
-        setMail(e.target.value);
-    }
+    const emailRef = useRef(null);
+    const passwordRef = useRef(null);
+
+    
     return (
         <section className={styles.page}> 
             <div className={styles.block}>
                 <div className={styles.logo}><h1>Log in</h1></div>
-                <form className={styles.inputs}>
-                    <input type="email" name={mail}  placeholder="Email address" onChange={(e) => {changeMail(e)}} required autoFocus />
-                    <input type="password" name={password}  placeholder="Password" onChange={(e) => {changePassword(e)}} required autoFocus />
-                    <button className={styles.logBut}> <p>log in</p></button>
+                <form className={styles.inputs} onSubmit={handleSubmit}>
+                    <input type="email" 
+                        ref={emailRef}  
+                        placeholder="Email address" 
+                        required autoFocus />
+
+                    <input type="password" 
+                        ref={passwordRef} 
+                        placeholder="Password" 
+                        required autoFocus />
+
+                    <button className={styles.logBut} type="submit"> <p>log in</p></button>
                 </form>
                 <div className={styles.problems}>
                     <button>
@@ -25,7 +30,7 @@ export default function Login() {
                             <p>New? Create an account</p>
                         </a>
                     </button>
-                    <button type="submit">
+                    <button>
                         <a>
                             <p>Forgot your password?</p>
                         </a>

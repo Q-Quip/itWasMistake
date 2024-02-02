@@ -1,7 +1,16 @@
 const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('отправка');
+    const formNode = event.target;
+    formConsole(formNode);
 }
 
-const logForm = document.querySelector(`.${styles.inputs}`);
-logForm.addEventListener("submit", handleSubmit);
+const formConsole = (formNode) => {
+    const {elements} = formNode;
+    Array.from(elements).forEach((element) => {
+        const {name, value} = element;
+        console.log({ [name]: value });
+
+    })
+}
+
+export {handleSubmit};
